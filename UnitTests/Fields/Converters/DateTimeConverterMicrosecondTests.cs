@@ -11,8 +11,8 @@ namespace UnitTests.Fields.Converters
         public void CanConvertFromDateTimeStringWithNanosecondsToValidDateTimeObject()
         {
             //GIVEN - a datetime string with nanoseconds
-            var dateTimeStringWithNanoseconds = "20170305-13:22:12.123456789";
-            var dateTimeStringWithNanosecondsTruncated = "20170305-13:22:12.123456700";
+            var dateTimeStringWithNanoseconds = "20170305-13:22:12.023456789";
+            var dateTimeStringWithNanosecondsTruncated = "20170305-13:22:12.023456700";
 
             //WHEN - it is converted to a date time
             var convertedDateTime = DateTimeConverter.ConvertToDateTime(dateTimeStringWithNanoseconds, TimeStampPrecision.Nanosecond);
@@ -24,7 +24,7 @@ namespace UnitTests.Fields.Converters
             Assert.AreEqual(13, convertedDateTime.Hour);
             Assert.AreEqual(22, convertedDateTime.Minute);
             Assert.AreEqual(12, convertedDateTime.Second);
-            Assert.AreEqual(123, convertedDateTime.Millisecond);
+            Assert.AreEqual(023, convertedDateTime.Millisecond);
             Assert.AreEqual(456700, convertedDateTime.Nanosecond()); //100 Nanosecond Truncated Resolution
             Assert.AreEqual(dateTimeStringWithNanosecondsTruncated, DateTimeConverter.Convert(convertedDateTime, TimeStampPrecision.Nanosecond));
         }
