@@ -1,4 +1,5 @@
 E:
+cd /
 cd EQ_DEV\QuickFixn\QuickFixn
 dotnet pack "QuickFix.csproj" -p:Configuration=Release
 nuget add "bin\Release\QuickFIXn.Core.1.10.1.nupkg" -source \\Eurosim001bk\BK_ET\NuGet
@@ -8,6 +9,10 @@ cd EQ_DEV\QuickFixn\Messages\FIX42
 dotnet pack "QuickFix.FIX42.csproj" -p:Configuration=Release
 nuget add "bin\Release\QuickFIXn.FIX4.2.1.10.1.nupkg" -source \\Eurosim001bk\BK_ET\NuGet
 
+cd /
+cd EQ_DEV\QuickFixn\Messages\FIX44
+dotnet pack "QuickFix.FIX44.csproj" -p:Configuration=Release
+nuget add "bin\Release\QuickFIXn.FIX4.4.1.10.1.nupkg" -source \\Eurosim001bk\BK_ET\NuGet
 
 cd /
 cd EQ_DEV\QuickFixn\Messages\FIX50SP2
