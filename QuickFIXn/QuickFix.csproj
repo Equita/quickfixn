@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net461</TargetFrameworks>
     <Title>QuickFIX/n</Title>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
@@ -10,7 +10,7 @@
     <Description>Open-source C# implementation of QuickFIX. Version mainteined by Equita SIM S.p.A.. This package contains the core classes for building applications implementing the FIX protocols. To create an application targeting a specific FIX protocol version, choose the appropriate FIX protocol-specific QuickFIXn package instead.</Description>
     <Copyright>Copyright © 2011 - $([System.DateTime]::UtcNow.Year) QuickFIXn.org. All rights reserved.</Copyright>
     <Authors>Connamara Systems, LLC and QuickFIX/n contributors - Equita SIM S.p.A.</Authors>
-    <Version>1.10.1</Version>
+    <Version>1.10.3</Version>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <RootNamespace>QuickFix</RootNamespace>
     <Platforms>AnyCPU;x64</Platforms>
@@ -35,5 +35,9 @@
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
       <_Parameter1>UnitTests</_Parameter1>
     </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
   </ItemGroup>
 </Project>
